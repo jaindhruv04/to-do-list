@@ -1,32 +1,46 @@
 var toDoList = []
-document.querySelector("#addButton").addEventListener("click", pushList);
+document.querySelector("#addButton").addEventListener("click", pushItem);
 
-function pushList() {
+function pushItem() {
     var toDo = document.querySelector("#addInput")
-    var toDoItems = document.querySelector(".toDoItems")
-    console.log(toDoList)
     if (toDo.value !== "") {
-        toDoItems.innerHTML=""
+        toDoList.reverse()
         toDoList.push(toDo.value)
         toDoList.reverse()
-        toDoList.forEach(
-            (item) => {
-                var toDoItem = document.createElement("div");
-                toDoItem.classList.add('toDoItem')
-                toDoItems.appendChild(toDoItem);
-
-                var toDoItemText = document.createElement("div")
-                toDoItemText.classList.add('toDoItemText')
-                toDoItem.appendChild(toDoItemText);
-
-                var removeButton = document.createElement("button")
-                removeButton.classList.add("remove");
-                removeButton.textContent = "remove"
-                toDoItem.appendChild(removeButton);
-
-                toDoItemText.textContent = item;
-            }
-        )
+        displayItems()
     }
+}
+
+function removeItem() {
     console.log(toDoList)
+    toDoList.splice(this.id, 1)
+    console.log(toDoList)
+    displayItems()
+}
+
+function displayItems() {
+    var toDoItems = document.querySelector(".toDoItems")
+    toDoItems.innerHTML = ""
+    toDoList.forEach(
+        (item) => {
+            var index = toDoList.findIndex(element => element === item)
+
+            var toDoItem = document.createElement("div");
+            toDoItem.classList.add('toDoItem')
+            toDoItems.appendChild(toDoItem);
+
+            var toDoItemText = document.createElement("div")
+            toDoItemText.classList.add('toDoItemText')
+            toDoItem.appendChild(toDoItemText);
+
+            var removeButton = document.createElement("button")
+            removeButton.classList.add("remove");
+            removeButton.id = index
+            removeButton.textContent = "remove"
+            removeButton.addEventListener("click", removeItem)
+            toDoItem.appendChild(removeButton);
+
+            toDoItemText.textContent = item;
+        }
+    )
 }
