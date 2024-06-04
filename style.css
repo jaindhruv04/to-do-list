@@ -1,35 +1,33 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #ba8bc2;
+    background: linear-gradient(to right, #133047, #1b6d1e);
 }
 
 .display {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .ToDoList {
-    /* background-color: whitesmoke; */
-    margin: 5%;
+    margin: 1%;
     color: aqua;
     width: 35vw;
-    min-height: 35vw; 
+    min-height: 70vh; 
     text-align: center;
     border-radius: 100px;
-    background: linear-gradient(to bottom, #2196F3, #4CAF50);
+    background-color: antiquewhite;
+    padding: 1%;
 }
 
 .title {
-    padding-top: 20px;
     font-size: 150%;
-    color: #333333;
+    color: rgb(38, 38, 150);
     font-weight: bold;
     margin-bottom: 20px;
 }
-
-.add {}
 
 .add input {
     height: 45px;
@@ -46,14 +44,14 @@ body{
     font-size: large;
     text-align: center;
     width: 70px;
+    border-radius: 25px;
+    background: rgb(180, 176, 176);
 }
 .toDoThings{
     background-color: white;
     color: #000000;
 }
-.toDoItems{
-    /* text-align: center; */
-}
+
 .toDoItem{
     display: flex;
     height: 45px;
@@ -65,14 +63,31 @@ body{
 }
 .toDoItem button{
     margin: 1%;
-    width: 30%;
-
+    width: 12%;
+    border-radius: 25px;
 }
 .toDoItemText{
-    flex: 0.9;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: brown;
+    border-radius: 25px;
+    color: black;
     margin-left: 5%;
+}
+
+.remove{
+    border: none;
+    background-color: inherit;
+}
+
+.remove i:hover{
+    color: red
+}
+
+@media (max-width: 480px) {
+    .ToDoList{
+        width: 70vw;
+        height: 90vh;
+    }
 }

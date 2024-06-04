@@ -36,7 +36,7 @@ function displayItems() {
             var removeButton = document.createElement("button")
             removeButton.classList.add("remove");
             removeButton.id = index
-            removeButton.textContent = "remove"
+            removeButton.innerHTML = `<i class="fa fa-trash-o" style="font-size:24px"></i>`
             removeButton.addEventListener("click", removeItem)
             toDoItem.appendChild(removeButton);
 
