@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ba8bc2;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ToDoList {
+    /* background-color: whitesmoke; */
+    margin: 5%;
+    color: aqua;
+    width: 35vw;
+    min-height: 35vw; 
+    text-align: center;
+    border-radius: 100px;
+    background: linear-gradient(to bottom, #2196F3, #4CAF50);
+}
+
+.title {
+    padding-top: 20px;
+    font-size: 150%;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.add {}
+
+.add input {
+    height: 45px;
+    width: 70%;
+    border: 0;
+    border-bottom: 1px dashed pink;
+    background-color: inherit;
+    color: #000000;
+    font-size: large;
+    font-weight: bold;
+}
+.add button{
+    height: 45px;
+    font-size: large;
+    text-align: center;
+    width: 70px;
+}
+.toDoThings{
+    background-color: white;
+    color: #000000;
+}
+.toDoItems{
+    /* text-align: center; */
+}
+.toDoItem{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    background-color: inherit;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+.toDoItem button{
+    margin: 1%;
+    width: 30%;
+
+}
+.toDoItemText{
+    flex: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    margin-left: 5%;
+}
