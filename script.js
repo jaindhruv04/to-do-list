@@ -1,6 +1,14 @@
 var toDoList = []
 document.querySelector("#addButton").addEventListener("click", pushItem);
 
+document.addEventListener("keydown", (key) => {
+    const keyInput = key.key;
+    if (keyInput === "Enter") {
+        pushItem();
+    }
+}
+)
+
 function pushItem() {
     var toDo = document.querySelector("#addInput")
     if (toDo.value !== "") {
@@ -8,13 +16,13 @@ function pushItem() {
         toDoList.push(toDo.value)
         toDoList.reverse()
         displayItems()
+        toDo.value = ""
     }
 }
 
 function removeItem() {
     console.log(toDoList)
     toDoList.splice(this.id, 1)
-    console.log(toDoList)
     displayItems()
 }
 

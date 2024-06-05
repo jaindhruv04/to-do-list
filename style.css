@@ -13,12 +13,11 @@ body{
 
 .ToDoList {
     margin: 1%;
-    color: aqua;
     width: 35vw;
-    min-height: 70vh; 
+    min-height: 70vh;
     text-align: center;
     border-radius: 100px;
-    background-color: antiquewhite;
+    background-color: #d3d3d3;
     padding: 1%;
 }
 
@@ -29,30 +28,54 @@ body{
     margin-bottom: 20px;
 }
 
+.add {
+    width: 100%;
+    border-radius: 25px;
+    background-color: #f0f4f7;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+}
+
 .add input {
     height: 45px;
-    width: 70%;
-    border: 0;
-    border-bottom: 1px dashed pink;
+    width: 75%;
+    border: none;
     background-color: inherit;
-    color: #000000;
+    color: #333333;
     font-size: large;
     font-weight: bold;
-}
-.add button{
-    height: 45px;
-    font-size: large;
+    padding: 0;
     text-align: center;
-    width: 70px;
-    border-radius: 25px;
-    background: rgb(180, 176, 176);
 }
-.toDoThings{
+
+.add input:focus {
+    outline: none;
+}
+
+.addButton {
+    width: 25%;
+    height: 45px;
+    background: #61a5c2;
+
+    font-size: large;
+    color: white;
+
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.toDoThings {
     background-color: white;
     color: #000000;
 }
 
-.toDoItem{
+.toDoItem {
     display: flex;
     height: 45px;
     width: 100%;
@@ -61,12 +84,14 @@ body{
     font-weight: bold;
     text-align: center;
 }
-.toDoItem button{
+
+.toDoItem button {
     margin: 1%;
     width: 12%;
     border-radius: 25px;
 }
-.toDoItemText{
+
+.toDoItemText {
     width: 75%;
     display: flex;
     align-items: center;
@@ -76,18 +101,38 @@ body{
     margin-left: 5%;
 }
 
-.remove{
+.remove {
     border: none;
     background-color: inherit;
 }
 
-.remove i:hover{
+.remove i:hover {
     color: red
 }
 
+.quote {
+    font-size: 145%;
+    color: whitesmoke;
+}
+
+@media(max-width: 768px) {
+    .quote {
+        display: none;
+    }
+}
+
 @media (max-width: 480px) {
-    .ToDoList{
+    .title {
+        font-size: 120%;
+    }
+
+    .ToDoList {
         width: 70vw;
         height: 90vh;
     }
+
+    .add input {
+        height: 40px;
+    }
+
 }
