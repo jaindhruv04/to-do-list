@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #133047, #1b6d1e);
@@ -101,7 +101,7 @@ body{
     margin-left: 5%;
 }
 
-.remove {
+.remove, .tick {
     border: none;
     background-color: inherit;
 }
@@ -110,9 +110,17 @@ body{
     color: red
 }
 
+.tick i:hover {
+    color: green;
+}
+
 .quote {
     font-size: 145%;
     color: whitesmoke;
+}
+
+.lineThrough{
+    text-decoration: line-through;
 }
 
 @media(max-width: 768px) {
